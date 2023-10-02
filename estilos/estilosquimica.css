@@ -3,29 +3,35 @@
     background-color: rgb(26, 25, 23);
     color: cornflowerblue;
 }
-p{
+
+p {
     color: rgb(121, 114, 206);
     font-size: 18px;
     color-font
 }
+
 img {
     padding: 5px;
     margin: 10px;
 }
-iframe{
+
+iframe {
     margin: 10px;
 }
-h1{
+
+h1 {
     border-radius: 127px 0px 111px 0px;
--webkit-border-radius: 127px 0px 111px 0px;
--moz-border-radius: 127px 0px 111px 0px;
-border: 32px groove #6c0a0a;
-background-color: indigo;
+    -webkit-border-radius: 127px 0px 111px 0px;
+    -moz-border-radius: 127px 0px 111px 0px;
+    border: 32px groove #6c0a0a;
+    background-color: indigo;
 }
-.grid-container{
+
+.grid-container {
     width: 800px;
     display: grid;
-    grid-template-columns: repeat(auto);
+    background-color: #6c0a0a;
+    grid-template-columns: 300px 200px 400px;
     grid-gap: 10px;
     padding: 10px;
-}
+} 
