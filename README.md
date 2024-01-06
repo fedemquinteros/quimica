@@ -1,0 +1,1 @@
+Un pequeño resumen de la tabla periodica, analizando grupo por grupo sus caracteristicas principales. Intentare con esto ayudar a futuros colegas a entender de manera mas sencilla la quimica inorganica.
