@@ -19,6 +19,7 @@ function mostrarSeccion(idSeccion) {
 
 const temaOscuro = () => {
     document.querySelector("body").setAttribute("data-bs-theme", "dark");
+    document.querySelector("#dl-icon").setAttribute("class", "bi bi-sun-fill")
 
     const styleLink = document.createElement('link');
     styleLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
@@ -33,6 +34,7 @@ const temaOscuro = () => {
 
 const temaClaro = () => {
     document.querySelector("body").setAttribute("data-bs-theme", "light");
+    document.querySelector("#dl-icon").setAttribute("class", "bi bi-moon-fill")
 
     const styleLink = document.createElement('link');
     styleLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
