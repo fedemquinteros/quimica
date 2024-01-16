@@ -2,12 +2,15 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    font-weight: 600;
+    position: relative;
+    min-height: 100vh;
 }
 
 header {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #eaecf0;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,6 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 nav li {
@@ -131,11 +135,11 @@ main {
 footer {
     display: flex;
     justify-content: center;
-    background-color: #eaecf0;
+    background-color: #dadbdd;
     color: black;
     font-weight: 600;
     padding: 0px;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     font-size: 16px;
@@ -143,4 +147,3 @@ footer {
     margin: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
-  

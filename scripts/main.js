@@ -1,25 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Agrega un evento 'click' a cada enlace de navegación
     document.querySelectorAll('nav a').forEach(function (enlace) {
         enlace.addEventListener('click', function (event) {
-            // Evita que se ejecute el comportamiento predeterminado del enlace
             event.preventDefault();
-
-            // Obtiene el identificador de la sección desde el atributo href
             var idSeccion = this.getAttribute('href').substring(1);
-
-            // Llama a la función mostrarSeccion con el identificador de la sección
             mostrarSeccion(idSeccion);
         });
     });
 });
 
 function mostrarSeccion(idSeccion) {
-    // Oculta todas las secciones
     document.querySelectorAll('main section').forEach(function (seccion) {
         seccion.classList.remove('active');
     });
 
-    // Muestra la sección seleccionada
     document.getElementById(idSeccion).classList.add('active');
+}
+
+
+const temaOscuro = () => {
+    document.querySelector("body").setAttribute("data-bs-theme", "dark");
+
+    const styleLink = document.createElement('link');
+    styleLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+    styleLink.rel = 'stylesheet';
+    document.head.appendChild(styleLink);
+
+    document.querySelector("nav").classList.add("bg-dark");
+    document.querySelector("header").classList.add("bg-dark", "text-light");
+}
+
+const temaClaro = () => {
+    document.querySelector("body").setAttribute("data-bs-theme", "light");
+
+    const styleLink = document.createElement('link');
+    styleLink.href = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css';
+    styleLink.rel = 'stylesheet';
+    document.head.appendChild(styleLink);
+
+    document.querySelector("nav").classList.remove("bg-dark");
+    document.querySelector("header").classList.remove("bg-dark", "text-light");
+}
+
+const cambiarTema = () => {
+    document.querySelector("body").getAttribute("data-bs-theme") === "light" ?
+        temaOscuro() : temaClaro();
 }
