@@ -2,10 +2,30 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('nav a').forEach(function (enlace) {
         enlace.addEventListener('click', function (event) {
             event.preventDefault();
-            var idSeccion = this.getAttribute('href').substring(1);
+            let idSeccion = this.getAttribute('href').substring(1);
             mostrarSeccion(idSeccion);
         });
     });
+});
+
+function mostrarSeccion(idSeccion) {
+    document.querySelectorAll('main section').forEach(function (seccion) {
+        seccion.classList.remove('active');
+        
+    });
+
+    document.getElementById(idSeccion).classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // llama a la funcion mostrarSeccion con el id de la seccion de inicio
+    mostrarSeccion("inicio");
+
+    // hace scroll automaticamente a la seccion de inicio
+    let inicioSection = document.getElementById("inicio");
+    if (inicioSection) {
+        inicioSection.scrollIntoView();
+    }
 });
 
 function mostrarSeccion(idSeccion) {
@@ -15,6 +35,7 @@ function mostrarSeccion(idSeccion) {
 
     document.getElementById(idSeccion).classList.add('active');
 }
+
 
 
 const temaOscuro = () => {
