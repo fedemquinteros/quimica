@@ -27,6 +27,8 @@ const temaOscuro = () => {
 
     document.querySelector("nav").classList.add("bg-dark");
     document.querySelector("header").classList.add("bg-dark", "text-light");
+    document.querySelector("footer").classList.add("bg-dark", "text-light");
+
 }
 
 const temaClaro = () => {
@@ -39,6 +41,8 @@ const temaClaro = () => {
 
     document.querySelector("nav").classList.remove("bg-dark");
     document.querySelector("header").classList.remove("bg-dark", "text-light");
+    document.querySelector("footer").classList.remove("bg-dark", "text-light");
+
 }
 
 const cambiarTema = () => {
