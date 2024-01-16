@@ -1,10 +1,18 @@
-/* Agrega tus estilos según sea necesario */
-
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #eaecf0;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 header,
 nav,
@@ -22,6 +30,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
+    justify-content: space-around;
 }
 
 nav li {
@@ -42,14 +51,96 @@ nav a:hover {
 
 section {
     padding: 20px;
-    /* Ajusta según sea necesario */
     margin-bottom: 20px;
-    /* Ajusta según sea necesario */
     display: none;
 }
-
-
 
 .active {
     display: block;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    section {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+}
+
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0366d6;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+main {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #eaecf0;
+    color: black;
+    font-weight: 600;
+    padding: 0px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    align-items: center;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
